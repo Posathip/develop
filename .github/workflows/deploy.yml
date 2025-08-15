@@ -24,9 +24,7 @@ jobs:
           projectId: "${{ secrets.PROJECT_ID }}"
 
       - name: Send LINE Message on Success or Failure
-        if: always()
         run: |
-          PROJECTID ="workshopii-da816"
           STATUS=" Deploy Successful!"
           curl -X POST https://api.line.me/v2/bot/message/push \
           -H 'Content-Type: application/json' \
@@ -36,7 +34,7 @@ jobs:
             \"messages\":[
               {
                 \"type\":\"text\",
-                \"text\":\"$STATUS\n Visit: https://$PROJECTID.web.app\"
+                \"text\":\"$STATUS\n Visit: https://workshopii-da816.web.app\"
               }
             ]
           }"
