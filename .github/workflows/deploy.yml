@@ -27,9 +27,9 @@ jobs:
         if: always()
         run: |
           if [ "${{ job.status }}" == "success" ]; then
-            STATUS="✅ Deploy Successful!"
+            STATUS=" Deploy Successful!"
           else
-            STATUS="❌ Deploy Failed!"
+            STATUS=" Deploy Failed!"
           fi
 
           curl -X POST https://api.line.me/v2/bot/message/push \
