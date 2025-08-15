@@ -40,7 +40,7 @@ jobs:
             \"messages\":[
               {
                 \"type\":\"text\",
-                \"text\":\"$STATUS\n🌐 Visit: https://${FIREBASE_PROJECT_ID}.web.app\"
+                \"text\":\"$STATUS\n Visit: https://${FIREBASE_PROJECT_ID}.web.app\"
               }
             ]
           }"
